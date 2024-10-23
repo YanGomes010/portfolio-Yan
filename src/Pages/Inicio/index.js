@@ -1,11 +1,10 @@
-
 import styles from "./inicio.module.css"
 import posts from "assets/posts.json"
-import Post from "Components/Post";
+import Post from "Components/PostCard";
 
 export default function Inicio(){
     return(
-        <ul className={styles.post}>
+        <ul className={styles.posts}>
         {posts.map((post)=>
             <li key={post.id}>
                 <Post post={post}/>    

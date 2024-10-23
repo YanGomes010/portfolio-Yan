@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom"
 import styles from "./post.module.css"
+import Botao from "Components/Botao"
 
-export default function Post({post}){
+export default function PostCard({post}){
     return(
+        <Link to={`post/${post.id}`}>
         <div className={styles.post}>
             <img 
             className={styles.capa}
@@ -9,7 +12,8 @@ export default function Post({post}){
             alt="Imagem de capa do post"
             />
             <h2 className={styles.titulo}>{post.titulo}</h2>
-            <button className={styles.botaoLer}>Ler</button>
+            <Botao>Ler</Botao>
         </div>
+        </Link>
     )
 }
